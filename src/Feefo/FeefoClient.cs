@@ -8,6 +8,7 @@ using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 using Feefo.Responses;
+using Newtonsoft.Json;
 
 namespace Feefo
 {
@@ -53,7 +54,7 @@ namespace Feefo
             var content = await response.Content.ReadAsAsync<Rootobject>(mediaTypeFormatterCollection)
                                             .ConfigureAwait(false);
 
-            return new FeefoClientResponse(content.FEEDBACKLIST);
+            return new FeefoClientResponse(content.FeedbackList);
         }
 
 
@@ -75,11 +76,11 @@ namespace Feefo
 
     public class FeefoClientResponse
     {
-        public FeefoClientResponse(FEEDBACKLIST feedbackList)
+        public FeefoClientResponse(FeedbackList feedbackList)
         {
             FeedbackList = feedbackList;
         }
 
-        public FEEDBACKLIST FeedbackList { get; }
+        public FeedbackList FeedbackList { get; }
     }
 }

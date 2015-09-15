@@ -51,11 +51,19 @@
     <Compile Include="FeefoClient.cs" />
     <Compile Include="FeefoSettings.cs" />
     <Compile Include="IFeefoSettings.cs" />
+    <Compile Include="JsonConverters\SingleValueArrayConverter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Responses\Feedback.cs" />
+    <Compile Include="Responses\FeedbackList.cs" />
+    <Compile Include="Responses\FurtherCommentsThread.cs" />
+    <Compile Include="Responses\Post.cs" />
     <Compile Include="Responses\RootObject.cs" />
+    <Compile Include="Responses\Summary.cs" />
+    <Compile Include="Responses\VendorRef.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="Feefo.nuspec" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

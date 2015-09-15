@@ -54,7 +54,7 @@ namespace Feefo.Tests
             Assert.That(_result.FeedbackList.SUMMARY.TOTALRESPONSES, Is.EqualTo(3871));
             Assert.That(_result.FeedbackList.SUMMARY.TOTALSERVICECOUNT, Is.EqualTo(3866));
             Assert.That(_result.FeedbackList.SUMMARY.VENDORLOGON, Is.EqualTo("www.examplesupplier.com"));
-            Assert.That(_result.FeedbackList.SUMMARY.VENDORREF, Is.Not.Null);
+            Assert.That(_result.FeedbackList.SUMMARY.VendorRef, Is.Not.Null);
             Assert.That(_result.FeedbackList.SUMMARY.WORST, Is.EqualTo(0));
         }
     }
