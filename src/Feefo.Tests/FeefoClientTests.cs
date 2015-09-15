@@ -57,5 +57,32 @@ namespace Feefo.Tests
             Assert.That(_result.FeedbackList.SUMMARY.VendorRef, Is.Not.Null);
             Assert.That(_result.FeedbackList.SUMMARY.WORST, Is.EqualTo(0));
         }
+
+        [Test]
+        public void ThenTheResultContainsTheCorrectCounts()
+        {
+            Assert.That(_result.FeedbackList.FEEDBACK.Count, Is.EqualTo(20));
+        }
+
+        [Test]
+        public void ThenTheFeedbackId7445488IsCorrect()
+        {
+            var feedback = _result.FeedbackList.FEEDBACK.First(x => x.FEEDBACKID == 7445488);
+
+            Assert.That(feedback.COUNT, Is.EqualTo(1));
+            Assert.That(feedback.CUSTOMERCOMMENT, Is.EqualTo("Service rating : Really good service<br/>Product : Good camera for the price."));
+            Assert.That(feedback.DATE, Is.EqualTo("10-Sep-2015"));
+            Assert.That(feedback.DESCRIPTION, Is.EqualTo("Konica Minolta Z20"));
+            Assert.That(feedback.FACEBOOKSHARELINK, Is.EqualTo("http://www.facebook.com/sharer.php?u=http%3A%2F%2Fwww.feefo.com%2FGB%2Fen%2Freviews%2FExample-Supplier-Ltd%2F%3Fid%3D13%26servicefeedbackid%3D7445488"));
+            Assert.That(feedback.FEEDBACKID, Is.EqualTo(7445488));
+            Assert.That(feedback.HREVIEWDATE, Is.EqualTo(new DateTime(2015, 09, 10, 11, 25, 58)));
+            Assert.That(feedback.HREVIEWRATING, Is.EqualTo(4));
+            Assert.That(feedback.LINK, Is.EqualTo("http://www.examplesupplier.com/product_info.php?products_id=1333OSCommerceOSCommerceOSCommerce"));
+            Assert.That(feedback.PRODUCTCODE, Is.EqualTo(133));
+            Assert.That(feedback.PRODUCTRATING, Is.EqualTo("+"));
+            Assert.That(feedback.READMOREURL, Is.EqualTo("http://www.feefo.com/GB/en/reviews/Example-Supplier-Ltd/?id=13&servicefeedbackid=7445488"));
+            Assert.That(feedback.SERVICERATING, Is.EqualTo("++"));
+            Assert.That(feedback.SHORTCUSTOMERCOMMENT, Is.EqualTo("Service rating : Really good service<br/>Product : Good camera for the price."));
+        }
     }
 }
