@@ -106,13 +106,15 @@ namespace Feefo.Responses
         /// The latest product review.
         /// </summary>
         [JsonProperty(PropertyName = "PRODUCTLATEST")]
-        public string ProductLatest { get; set; }
+        [JsonConverter(typeof(StringEnumConverter))]
+        public Rating ProductLatest { get; set; }
 
         /// <summary>
         /// The latest service review.
         /// </summary>
         [JsonProperty(PropertyName = "SERVICELATEST")]
-        public string ServiceLatest { get; set; }
+        [JsonConverter(typeof(StringEnumConverter))]
+        public Rating ServiceLatest { get; set; }
 
         /// <summary>
         /// A shortened version of the vendor's reply, ending in an ellipsis (...) for use when displaying feedback

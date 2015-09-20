@@ -150,11 +150,11 @@ namespace Feefo.Tests
                     DateTime = new DateTime(2015, 09, 08, 14, 57, 50),
                     Link = "http://www.examplesupplier.com/product_info.php?products_id=Comment013OSCommerceOSCommerce",
                     ProductCode = "Comment01",
-                    ProductLatest = "++",
+                    ProductLatest = Rating.Excellent,
                     ProductRating = Rating.Withdrawn,
                     ReadmMoreUrl =
                         "http://www.feefo.com/GB/en/reviews/Example-Supplier-Ltd/?id=13&servicefeedbackid=7445479",
-                    ServiceLatest = "++",
+                    ServiceLatest = Rating.Excellent,
                     ServiceRating = Rating.Withdrawn,
                     ShortCustomerComment =
                         "Service rating : This is a test service reviewwwwwwww0000000000000000000001<br/>Product : This is a test product reviewwwwwwww0000000000000000000001",
