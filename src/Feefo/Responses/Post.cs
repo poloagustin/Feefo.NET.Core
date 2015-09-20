@@ -1,11 +1,22 @@
-﻿namespace Feefo.Responses
+﻿using Newtonsoft.Json;
+
+namespace Feefo.Responses
 {
     public class Post
     {
-        public string DATE { get; set; }
-        public string VENDORCOMMENT { get; set; }
-        public string CUSTOMERCOMMENT { get; set; }
-        public string PRODUCTRATING { get; set; }
-        public string SERVICERATING { get; set; }
+        [JsonProperty(PropertyName = "DATE")]
+        public string Date { get; set; }
+
+        [JsonProperty(PropertyName = "VENDORCOMMENT")]
+        public string VendorComment { get; set; }
+
+        [JsonProperty(PropertyName = "CUSTOMERCOMMENT")]
+        public string CustomerComment { get; set; }
+
+        [JsonProperty(PropertyName = "PRODUCTRATING")]
+        public string ProductRating { get; set; }
+
+        [JsonProperty(PropertyName = "SERVICERATING")]
+        public string ServiceRating { get; set; }
     }
 }

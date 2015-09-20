@@ -1,27 +1,65 @@
 using System;
+using Newtonsoft.Json;
 
 namespace Feefo.Responses
 {
     public class Feedback
     {
-        public int COUNT { get; set; }
-        public string CUSTOMERCOMMENT { get; set; }
-        public string DATE { get; set; }
-        public string DESCRIPTION { get; set; }
-        public string FACEBOOKSHARELINK { get; set; }
-        public int FEEDBACKID { get; set; }
-        public DateTime HREVIEWDATE { get; set; }
-        public int HREVIEWRATING { get; set; }
-        public string LINK { get; set; }
-        public object PRODUCTCODE { get; set; }
-        public string PRODUCTRATING { get; set; }
-        public string READMOREURL { get; set; }
-        public string SERVICERATING { get; set; }
-        public string SHORTCUSTOMERCOMMENT { get; set; }
+        [JsonProperty(PropertyName = "COUNT")]
+        public int Count { get; set; }
+
+        [JsonProperty(PropertyName = "CUSTOMERCOMMENT")]
+        public string CustomerComment { get; set; }
+
+        [JsonProperty(PropertyName = "DATE")]
+        public string Date { get; set; }
+
+        [JsonProperty(PropertyName = "DESCRIPTION")]
+        public string Description { get; set; }
+
+        [JsonProperty(PropertyName = "FACEBOOKSHARELINK")]
+        public string FacebookShareLink { get; set; }
+
+        [JsonProperty(PropertyName = "FEEDBACKID")]
+        public int FeedbackId { get; set; }
+
+        [JsonProperty(PropertyName = "HREVIEWDATE")]
+        public DateTime HReviewDate { get; set; }
+
+        [JsonProperty(PropertyName = "HREVIEWRATING")]
+        public int HReviewRating { get; set; }
+
+        [JsonProperty(PropertyName = "LINK")]
+        public string Link { get; set; }
+
+        [JsonProperty(PropertyName = "PRODUCTCODE")]
+        public object ProductCode { get; set; }
+
+        [JsonProperty(PropertyName = "PRODUCTRATING")]
+        public string ProductRating { get; set; }
+
+        [JsonProperty(PropertyName = "READMOREURL")]
+        public string ReadmMoreUrl { get; set; }
+
+        [JsonProperty(PropertyName = "SERVICERATING")]
+        public string ServiceRating { get; set; }
+
+        [JsonProperty(PropertyName = "SHORTCUSTOMERCOMMENT")]
+        public string ShortCustomerComment { get; set; }
+
+        [JsonProperty(PropertyName = "FURTHERCOMMENTSTHREAD")]
         public FurtherCommentsThread FurtherCommentsThread { get; set; }
-        public string PRODUCTLATEST { get; set; }
-        public string SERVICELATEST { get; set; }
-        public string SHORTVENDORCOMMENT { get; set; }
-        public string VENDORCOMMENT { get; set; }
+
+        [JsonProperty(PropertyName = "PRODUCTLATEST")]
+        public string ProductLatest { get; set; }
+
+        [JsonProperty(PropertyName = "SERVICELATEST")]
+        public string ServiceLatest { get; set; }
+
+        [JsonProperty(PropertyName = "SHORTVENDORCOMMENT")]
+        public string ShortVendorComment { get; set; }
+
+        [JsonProperty(PropertyName = "VENDORCOMMENT")]
+        public string VendorComment { get; set; }
     }
 }
