@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace Feefo.Responses
 {
@@ -38,7 +39,8 @@ namespace Feefo.Responses
         /// Shows if the feed mode has been set to show 'product' or 'service' feedback. This is usually set by the mode parameter or will always be set to 'product' upon the inclusion of the vendorref parameter.
         /// </summary>
         [JsonProperty(PropertyName = "MODE")]
-        public string Mode { get; set; }
+        [JsonConverter(typeof(StringEnumConverter))]
+        public Mode Mode { get; set; }
 
         /// <summary>
         /// An integer with the number of product feedbacks rated as Bad

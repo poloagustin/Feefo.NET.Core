@@ -57,6 +57,7 @@
     <Compile Include="Responses\Feedback.cs" />
     <Compile Include="Responses\FeedbackList.cs" />
     <Compile Include="Responses\FurtherCommentsThread.cs" />
+    <Compile Include="Responses\Mode.cs" />
     <Compile Include="Responses\Post.cs" />
     <Compile Include="Responses\Rating.cs" />
     <Compile Include="Responses\RootObject.cs" />

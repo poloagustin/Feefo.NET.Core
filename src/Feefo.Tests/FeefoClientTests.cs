@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Security.Policy;
 using Feefo.Responses;
 using NUnit.Framework;
 
@@ -40,7 +39,7 @@ namespace Feefo.Tests
             Assert.That(_result.FeedbackList.Summary.Count, Is.EqualTo(3863));
             Assert.That(_result.FeedbackList.Summary.FeedGeneration, Is.EqualTo("Tue Sep 15 22:20:39 BST 2015"));
             Assert.That(_result.FeedbackList.Summary.Limit, Is.EqualTo(20));
-            Assert.That(_result.FeedbackList.Summary.Mode, Is.EqualTo("service"));
+            Assert.That(_result.FeedbackList.Summary.Mode, Is.EqualTo(Mode.Service));
             Assert.That(_result.FeedbackList.Summary.ProductBad, Is.EqualTo(323));
             Assert.That(_result.FeedbackList.Summary.ProductExcellent, Is.EqualTo(1009));
             Assert.That(_result.FeedbackList.Summary.ProductGood, Is.EqualTo(1233));
