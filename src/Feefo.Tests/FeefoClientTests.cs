@@ -142,8 +142,8 @@ namespace Feefo.Tests
                             {
                                 CustomerComment = "this is a re-rated review - PRODUCT",
                                 Date = new DateTime(2015, 09, 08),
-                                ProductRating = "++",
-                                ServiceRating = "++"
+                                ProductRating = Rating.Excellent,
+                                ServiceRating = Rating.Excellent
                             }
                         }
                     },

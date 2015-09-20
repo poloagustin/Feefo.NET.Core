@@ -1,5 +1,6 @@
 ﻿using System;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace Feefo.Responses
 {
@@ -27,12 +28,14 @@ namespace Feefo.Responses
         /// The product rating.
         /// </summary>
         [JsonProperty(PropertyName = "PRODUCTRATING")]
-        public string ProductRating { get; set; }
+        [JsonConverter(typeof(StringEnumConverter))]
+        public Rating ProductRating { get; set; }
 
         /// <summary>
         /// The service rating.
         /// </summary>
         [JsonProperty(PropertyName = "SERVICERATING")]
-        public string ServiceRating { get; set; }
+        [JsonConverter(typeof(StringEnumConverter))]
+        public Rating ServiceRating { get; set; }
     }
 }
