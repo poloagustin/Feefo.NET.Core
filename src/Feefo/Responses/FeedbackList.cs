@@ -5,6 +5,9 @@ namespace Feefo.Responses
 {
     public class FeedbackList
     {
+        /// <summary>
+        /// The main containing element of the reviews feed.
+        /// </summary>
         [JsonProperty(PropertyName = "FEEDBACK")]
         public List<Feedback> Feedback { get; set; }
 

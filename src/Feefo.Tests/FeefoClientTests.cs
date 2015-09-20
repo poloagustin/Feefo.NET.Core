@@ -83,7 +83,7 @@ namespace Feefo.Tests
                 Assert.That(feedback.Date, Is.EqualTo(expected.Date));
                 Assert.That(feedback.Description, Is.EqualTo(expected.Description));
                 Assert.That(feedback.FacebookShareLink, Is.EqualTo(expected.FacebookShareLink));
-                Assert.That(feedback.HReviewDate, Is.EqualTo(expected.HReviewDate));
+                Assert.That(feedback.DateTime, Is.EqualTo(expected.DateTime));
                 Assert.That(feedback.HReviewRating, Is.EqualTo(expected.HReviewRating));
                 Assert.That(feedback.Link, Is.EqualTo(expected.Link));
                 Assert.That(feedback.ProductCode, Is.EqualTo(expected.ProductCode));
@@ -107,7 +107,7 @@ namespace Feefo.Tests
                     FacebookShareLink =
                         "http://www.facebook.com/sharer.php?u=http%3A%2F%2Fwww.feefo.com%2FGB%2Fen%2Freviews%2FExample-Supplier-Ltd%2F%3Fid%3D13%26servicefeedbackid%3D7445488",
                     FeedbackId = 7445488,
-                    HReviewDate = new DateTime(2015, 09, 10, 11, 25, 58),
+                    DateTime = new DateTime(2015, 09, 10, 11, 25, 58),
                     HReviewRating = 4,
                     Link =
                         "http://www.examplesupplier.com/product_info.php?products_id=1333OSCommerceOSCommerceOSCommerce",
@@ -147,7 +147,7 @@ namespace Feefo.Tests
                             }
                         }
                     },
-                    HReviewDate = new DateTime(2015, 09, 08, 14, 57, 50),
+                    DateTime = new DateTime(2015, 09, 08, 14, 57, 50),
                     Link = "http://www.examplesupplier.com/product_info.php?products_id=Comment013OSCommerceOSCommerce",
                     ProductCode = "Comment01",
                     ProductLatest = "++",
@@ -192,7 +192,7 @@ namespace Feefo.Tests
                             }
                         }
                     },
-                    HReviewDate = new DateTime(2015, 07, 08, 21, 57, 22),
+                    DateTime = new DateTime(2015, 07, 08, 21, 57, 22),
                     HReviewRating = 5,
                     Link = "http://www.examplesupplier.com/product_info.php?products_id=1323OSCommerceOSCommerce",
                     ProductCode = 132,
@@ -227,7 +227,7 @@ namespace Feefo.Tests
                             }
                         }
                     },
-                    HReviewDate = new DateTime(2015, 04, 17, 09, 52, 13),
+                    DateTime = new DateTime(2015, 04, 17, 09, 52, 13),
                     HReviewRating = 5,
                     Link = "http://www.examplesupplier.com/product_info.php?products_id=Test3OSCommerceOSCommerce",
                     ProductCode = "Test",
