@@ -112,10 +112,10 @@ namespace Feefo.Tests
                     Link =
                         "http://www.examplesupplier.com/product_info.php?products_id=1333OSCommerceOSCommerceOSCommerce",
                     ProductCode = 133,
-                    ProductRating = "+",
+                    ProductRating = Rating.Good,
                     ReadmMoreUrl =
                         "http://www.feefo.com/GB/en/reviews/Example-Supplier-Ltd/?id=13&servicefeedbackid=7445488",
-                    ServiceRating = "++",
+                    ServiceRating = Rating.Excellent,
                     ShortCustomerComment =
                         "Service rating : Really good service<br/>Product : Good camera for the price."
                 },
@@ -151,11 +151,11 @@ namespace Feefo.Tests
                     Link = "http://www.examplesupplier.com/product_info.php?products_id=Comment013OSCommerceOSCommerce",
                     ProductCode = "Comment01",
                     ProductLatest = "++",
-                    ProductRating = "W",
+                    ProductRating = Rating.Withdrawn,
                     ReadmMoreUrl =
                         "http://www.feefo.com/GB/en/reviews/Example-Supplier-Ltd/?id=13&servicefeedbackid=7445479",
                     ServiceLatest = "++",
-                    ServiceRating = "W",
+                    ServiceRating = Rating.Withdrawn,
                     ShortCustomerComment =
                         "Service rating : This is a test service reviewwwwwwww0000000000000000000001<br/>Product : This is a test product reviewwwwwwww0000000000000000000001",
                     ShortVendorComment = "This is a reply comment through the UI.<br/><br/>Adrian",
@@ -196,10 +196,10 @@ namespace Feefo.Tests
                     HReviewRating = Rating.Excellent,
                     Link = "http://www.examplesupplier.com/product_info.php?products_id=1323OSCommerceOSCommerce",
                     ProductCode = 132,
-                    ProductRating = "++",
+                    ProductRating = Rating.Excellent,
                     ReadmMoreUrl =
                         "http://www.feefo.com/GB/en/reviews/Example-Supplier-Ltd/?id=13&servicefeedbackid=7445404",
-                    ServiceRating = "++",
+                    ServiceRating = Rating.Excellent,
                     ShortCustomerComment =
                         "Service rating : I had an excellent experience<br/>Product : Great! It's the best thing ever,",
                     ShortVendorComment =
@@ -231,10 +231,10 @@ namespace Feefo.Tests
                     HReviewRating = Rating.Excellent,
                     Link = "http://www.examplesupplier.com/product_info.php?products_id=Test3OSCommerceOSCommerce",
                     ProductCode = "Test",
-                    ProductRating = "++",
+                    ProductRating = Rating.Excellent,
                     ReadmMoreUrl =
                         "http://www.feefo.com/GB/en/reviews/Example-Supplier-Ltd/?id=13&servicefeedbackid=7445167",
-                    ServiceRating = "++",
+                    ServiceRating = Rating.Excellent,
                     ShortCustomerComment = "As Above",
                     ShortVendorComment = "Test<br/><br/>Adrian",
                     VendorComment = "Test<br/><br/>Adrian"

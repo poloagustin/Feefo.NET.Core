@@ -1,24 +1,9 @@
 using System;
-using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace Feefo.Responses
 {
-    public enum Rating
-    {
-        Unknown = 0,
-        [EnumMember(Value = "--")]
-        Bad = 1,
-        [EnumMember(Value = "-")]
-        Poor = 2,
-        [EnumMember(Value = "+")]
-        Good = 4,
-        [EnumMember(Value = "++")]
-        Excellent = 5,
-        [EnumMember(Value = "W")]
-        Withdrawn = int.MaxValue
-    }
-
     public class Feedback
     {
         /// <summary>
@@ -87,8 +72,9 @@ namespace Feefo.Responses
         /// <summary>
         /// The rating that the customer left about their product.
         /// </summary>
+        [JsonConverter(typeof(StringEnumConverter))]
         [JsonProperty(PropertyName = "PRODUCTRATING")]
-        public string ProductRating { get; set; }
+        public Rating ProductRating { get; set; }
 
         /// <summary>
         /// The URL to this feedback item on Feefo, for use in a ‘Read More’ link.
@@ -100,7 +86,8 @@ namespace Feefo.Responses
         /// The rating that the customer left about their service.
         /// </summary>
         [JsonProperty(PropertyName = "SERVICERATING")]
-        public string ServiceRating { get; set; }
+        [JsonConverter(typeof(StringEnumConverter))]
+        public Rating ServiceRating { get; set; }
 
         /// <summary>
         /// A shortened version of the customer comment, ending in an ellipsis (...) for use when displaying
