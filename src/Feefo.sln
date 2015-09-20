@@ -14,6 +14,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{217321A3
 		..\build-on_finish.ps1 = ..\build-on_finish.ps1
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Feefo.AcceptanceTests", "Feefo.AcceptanceTests\Feefo.AcceptanceTests.csproj", "{A430A05F-E571-4AD7-88F8-8C3897160D4E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -28,6 +30,10 @@ Global
 		{98C0EAFF-551D-4655-8779-B6028DBBDEE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{98C0EAFF-551D-4655-8779-B6028DBBDEE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{98C0EAFF-551D-4655-8779-B6028DBBDEE4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A430A05F-E571-4AD7-88F8-8C3897160D4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A430A05F-E571-4AD7-88F8-8C3897160D4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A430A05F-E571-4AD7-88F8-8C3897160D4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A430A05F-E571-4AD7-88F8-8C3897160D4E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

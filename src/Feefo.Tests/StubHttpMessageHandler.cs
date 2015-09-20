@@ -22,7 +22,7 @@ namespace Feefo.Tests
             if (request.RequestUri == _catchUri)
             {
                 var content = new StringContent(_response,
-                    Encoding.UTF8, "text/xml" /* its json but feefo lies to us */);
+                    Encoding.UTF8, "application/json" /* its json but feefo lies to us */);
 
                 return Task.FromResult(new HttpResponseMessage() { Content = content });
             }
