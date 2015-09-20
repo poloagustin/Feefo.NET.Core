@@ -14,11 +14,7 @@ namespace Feefo.AcceptanceTests
         [TestFixtureSetUp]
         public void GivenAFeefoClientWithAnExampleSupplier()
         {
-            var feefoSettings = new FeefoSettings()
-            {
-                BaseUri = new Uri("http://www.feefo.com/feefo/xmlfeed.jsp"),
-                Logon = "www.examplesupplier.com"
-            };
+            var feefoSettings = new FeefoSettings("www.examplesupplier.com");
 
             _client = new FeefoClient(feefoSettings);
         }

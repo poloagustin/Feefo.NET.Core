@@ -16,8 +16,8 @@ namespace Feefo.Tests
         [TestFixtureSetUp]
         public void GivenAFeefoClientWithAFakeClientHandler()
         {
-            var baseUri = "http://www.feefo.com/feefo/xmlfeed.jsp";
-            var feefoSettings = new FeefoSettings() {BaseUri = new Uri(baseUri), Logon = "www.examplesupplier.com"};
+            var baseUri = "http://example.kevsoft.net/feefo.jsp";
+            var feefoSettings = new FeefoSettings(new Uri(baseUri), "www.examplesupplier.com");
 
             _httpMessageHandler = new StubHttpMessageHandler(
                 new Uri($"{baseUri}?logon={feefoSettings.Logon}&json=true"),

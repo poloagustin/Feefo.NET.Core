@@ -16,15 +16,15 @@ namespace Feefo
     public class FeefoClient
     {
         private readonly HttpMessageHandler _handler;
-        private readonly FeefoSettings _feefoSettings;
+        private readonly IFeefoSettings _feefoSettings;
 
-        public FeefoClient(HttpMessageHandler handler, FeefoSettings feefoSettings)
+        public FeefoClient(HttpMessageHandler handler, IFeefoSettings feefoSettings)
         {
             _handler = handler;
             _feefoSettings = feefoSettings;
         }
 
-        public FeefoClient(FeefoSettings feefoSettings)
+        public FeefoClient(IFeefoSettings feefoSettings)
             : this(new HttpClientHandler
             {
                 AutomaticDecompression = DecompressionMethods.GZip | DecompressionMethods.Deflate
