@@ -1,8 +1,24 @@
 using System;
+using System.Runtime.Serialization;
 using Newtonsoft.Json;
 
 namespace Feefo.Responses
 {
+    public enum Rating
+    {
+        Unknown = 0,
+        [EnumMember(Value = "--")]
+        Bad = 1,
+        [EnumMember(Value = "-")]
+        Poor = 2,
+        [EnumMember(Value = "+")]
+        Good = 4,
+        [EnumMember(Value = "++")]
+        Excellent = 5,
+        [EnumMember(Value = "W")]
+        Withdrawn = int.MaxValue
+    }
+
     public class Feedback
     {
         /// <summary>
@@ -54,7 +70,7 @@ namespace Feefo.Responses
         /// A rating from bad to excellent.
         /// </summary>
         [JsonProperty(PropertyName = "HREVIEWRATING")]
-        public int HReviewRating { get; set; }
+        public Rating HReviewRating { get; set; }
 
         /// <summary>
         /// The URL of the product page on the supplier's site.

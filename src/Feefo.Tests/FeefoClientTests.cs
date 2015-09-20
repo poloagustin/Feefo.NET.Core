@@ -108,7 +108,7 @@ namespace Feefo.Tests
                         "http://www.facebook.com/sharer.php?u=http%3A%2F%2Fwww.feefo.com%2FGB%2Fen%2Freviews%2FExample-Supplier-Ltd%2F%3Fid%3D13%26servicefeedbackid%3D7445488",
                     FeedbackId = 7445488,
                     DateTime = new DateTime(2015, 09, 10, 11, 25, 58),
-                    HReviewRating = 4,
+                    HReviewRating = Rating.Good,
                     Link =
                         "http://www.examplesupplier.com/product_info.php?products_id=1333OSCommerceOSCommerceOSCommerce",
                     ProductCode = 133,
@@ -193,7 +193,7 @@ namespace Feefo.Tests
                         }
                     },
                     DateTime = new DateTime(2015, 07, 08, 21, 57, 22),
-                    HReviewRating = 5,
+                    HReviewRating = Rating.Excellent,
                     Link = "http://www.examplesupplier.com/product_info.php?products_id=1323OSCommerceOSCommerce",
                     ProductCode = 132,
                     ProductRating = "++",
@@ -228,7 +228,7 @@ namespace Feefo.Tests
                         }
                     },
                     DateTime = new DateTime(2015, 04, 17, 09, 52, 13),
-                    HReviewRating = 5,
+                    HReviewRating = Rating.Excellent,
                     Link = "http://www.examplesupplier.com/product_info.php?products_id=Test3OSCommerceOSCommerce",
                     ProductCode = "Test",
                     ProductRating = "++",
