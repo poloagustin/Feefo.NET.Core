@@ -30,6 +30,7 @@
     assemblies:
       - '**\*.Tests.dll'
       - '**\*.FunctionalTests.dll'
+      - '**\*.AcceptanceTests.dll'
 
   artifacts:
     - path: '*.nupkg'
