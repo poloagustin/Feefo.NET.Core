@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Feefo.Responses;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace Feefo
 {
@@ -22,7 +23,7 @@ namespace Feefo
             _handler = handler;
             _feefoSettings = feefoSettings;
         }
-        
+
         public FeefoClient(FeefoSettings feefoSettings)
             : this(new HttpClientHandler
             {
@@ -34,7 +35,7 @@ namespace Feefo
         private HttpClient CreateHttpClient()
         {
             var httpClient = HttpClientFactory.Create(_handler);
-            
+
             httpClient.BaseAddress = _feefoSettings.BaseUri;
 
             return httpClient;
@@ -45,32 +46,14 @@ namespace Feefo
             var httpClient = CreateHttpClient();
 
             var response = await httpClient.GetAsync($"?logon={_feefoSettings.Logon}&json=true")
-                                        .ConfigureAwait(false);
+                .ConfigureAwait(false);
 
             response.EnsureSuccessStatusCode();
-
-            var mediaTypeFormatterCollection = CreateMediaTypeFormatterCollection();
-
-            var content = await response.Content.ReadAsAsync<Rootobject>(mediaTypeFormatterCollection)
-                                            .ConfigureAwait(false);
+            
+            var content = await response.Content.ReadAsAsync<Rootobject>()
+                .ConfigureAwait(false);
 
             return new FeefoClientResponse(content.FeedbackList);
-        }
-
-
-        private IEnumerable<MediaTypeFormatter> CreateMediaTypeFormatterCollection()
-        {
-            var jsonMediaFormatter = new JsonMediaTypeFormatter();
-
-            // Feefo tells us its text/xml when its really json... lies!
-            jsonMediaFormatter.SupportedMediaTypes.Add(new MediaTypeHeaderValue("text/xml"));
-
-            var collection = new List<MediaTypeFormatter>()
-            {
-                jsonMediaFormatter
-            };
-
-            return collection;
         }
     }
 

@@ -1,4 +1,5 @@
 using System;
+using Feefo.JsonConverters;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
@@ -72,8 +73,8 @@ namespace Feefo.Responses
         /// <summary>
         /// The rating that the customer left about their product.
         /// </summary>
-        [JsonConverter(typeof(StringEnumConverter))]
         [JsonProperty(PropertyName = "PRODUCTRATING")]
+        [JsonConverter(typeof(StringEnumConverter))]
         public Rating ProductRating { get; set; }
 
         /// <summary>
@@ -107,14 +108,14 @@ namespace Feefo.Responses
         /// </summary>
         [JsonProperty(PropertyName = "PRODUCTLATEST")]
         [JsonConverter(typeof(StringEnumConverter))]
-        public Rating ProductLatest { get; set; }
+        public Rating? ProductLatest { get; set; }
 
         /// <summary>
         /// The latest service review.
         /// </summary>
         [JsonProperty(PropertyName = "SERVICELATEST")]
         [JsonConverter(typeof(StringEnumConverter))]
-        public Rating ServiceLatest { get; set; }
+        public Rating? ServiceLatest { get; set; }
 
         /// <summary>
         /// A shortened version of the vendor's reply, ending in an ellipsis (...) for use when displaying feedback

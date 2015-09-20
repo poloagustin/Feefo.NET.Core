@@ -29,13 +29,13 @@ namespace Feefo.Responses
         /// </summary>
         [JsonProperty(PropertyName = "PRODUCTRATING")]
         [JsonConverter(typeof(StringEnumConverter))]
-        public Rating ProductRating { get; set; }
+        public Rating? ProductRating { get; set; }
 
         /// <summary>
         /// The service rating.
         /// </summary>
         [JsonProperty(PropertyName = "SERVICERATING")]
         [JsonConverter(typeof(StringEnumConverter))]
-        public Rating ServiceRating { get; set; }
+        public Rating? ServiceRating { get; set; }
     }
 }
