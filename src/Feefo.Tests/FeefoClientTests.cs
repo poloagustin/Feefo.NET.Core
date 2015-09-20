@@ -135,13 +135,13 @@ namespace Feefo.Tests
                         {
                             new Post
                             {
-                                Date = "08-Sep-2015",
+                                Date = new DateTime(2015, 09, 08),
                                 VendorComment = "This is a reply comment through the UI.<br><br>Adrian"
                             },
                             new Post
                             {
                                 CustomerComment = "this is a re-rated review - PRODUCT",
-                                Date = "08-Sep-2015",
+                                Date = new DateTime(2015, 09, 08),
                                 ProductRating = "++",
                                 ServiceRating = "++"
                             }
@@ -177,17 +177,17 @@ namespace Feefo.Tests
                         {
                             new Post
                             {
-                                Date = "24-Jul-2015",
+                                Date = new DateTime(2015, 07, 24),
                                 VendorComment = "Product :test<br><br>Adrian"
                             },
                             new Post
                             {
-                                Date = "27-Jul-2015",
+                                Date = new DateTime(2015, 07, 27),
                                 VendorComment = "this is a test comment<br><br>Adrian"
                             },
                             new Post
                             {
-                                Date = "27-Jul-2015",
+                                Date = new DateTime(2015, 07, 27),
                                 VendorComment = "Product :this is a test for the second time.<br><br>Adrian"
                             }
                         }
@@ -222,7 +222,7 @@ namespace Feefo.Tests
                         {
                             new Post
                             {
-                                Date = "17-Apr-2015",
+                                Date = new DateTime(2015, 04, 17),
                                 VendorComment = "Test<br><br>Adrian"
                             }
                         }

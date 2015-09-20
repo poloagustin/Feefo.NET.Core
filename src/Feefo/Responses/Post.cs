@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using System;
+using Newtonsoft.Json;
 
 namespace Feefo.Responses
 {
@@ -8,7 +9,7 @@ namespace Feefo.Responses
         /// The date the further response was added.
         /// </summary>
         [JsonProperty(PropertyName = "DATE")]
-        public string Date { get; set; }
+        public DateTime Date { get; set; }
 
         /// <summary>
         /// Text of a response from the vendor.
