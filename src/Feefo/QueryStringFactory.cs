@@ -13,10 +13,10 @@ namespace Feefo
             {
                 query += $"&vendorref={feedbackRequest.VendorRef}";
             }
-
-            if (feedbackRequest.Since.HasValue)
+            
+            if (feedbackRequest.Since != Since.None)
             {
-                var since = _sinceValueMap[feedbackRequest.Since.Value];
+                var since = _sinceValueMap[feedbackRequest.Since];
 
                 query += $"&since={since}";
             }

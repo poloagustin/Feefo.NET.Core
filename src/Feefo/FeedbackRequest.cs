@@ -18,6 +18,6 @@
         /// <summary>
         /// since is the feedback data time period that should be returned.
         /// </summary>
-        public Since? Since { get; set; }
+        public Since Since { get; set; }
     }
 }

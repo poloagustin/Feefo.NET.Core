@@ -2,6 +2,7 @@
 {
     public enum Since
     {
+        None = 0,
         /// <summary>
         /// Returns the last 7 days of feedback data.
         /// </summary>
