@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FeedbackRequest.cs" />
     <Compile Include="FeefoClient.cs" />
     <Compile Include="FeefoClientResponse.cs" />
     <Compile Include="FeefoSettings.cs" />
@@ -66,6 +67,7 @@
     <Compile Include="Responses\RootObject.cs" />
     <Compile Include="Responses\Summary.cs" />
     <Compile Include="Responses\VendorRef.cs" />
+    <Compile Include="Since.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

@@ -53,7 +53,8 @@ namespace Feefo.Tests
         }
     }
 
-    public class QueryStringFactoryTestsWithRequest : QueryStringFactoryTests
+    [TestFixture]
+    public class QueryStringFactoryTestsForVendorRef : QueryStringFactoryTests
     {
         private string _vendorRef;
 
@@ -74,6 +75,39 @@ namespace Feefo.Tests
 
             Assert.That(lookup.ContainsKey("vendorref"), Is.True);
             Assert.That(lookup["vendorref"], Is.EqualTo(_vendorRef));
+        }
+    }
+
+    [TestFixture(Since.Week, "week")]
+    [TestFixture(Since.Month, "month")]
+    [TestFixture(Since.SixMonths, "6months")]
+    [TestFixture(Since.Year, "year")]
+    public class QueryStringFactoryTestsWithRequest : QueryStringFactoryTests
+    {
+        private readonly Since _since;
+        private readonly string _expected;
+
+        public QueryStringFactoryTestsWithRequest(Since since, string expected)
+        {
+            _since = since;
+            _expected = expected;
+        }
+        
+        protected override FeedbackRequest WithFeedbackRequest()
+        {
+            return new FeedbackRequest()
+            {
+                Since = _since
+            };
+        }
+
+        [Test]
+        public void ThenTheQueryStringContainsSince()
+        {
+            var lookup = GetQueryLookup();
+
+            Assert.That(lookup.ContainsKey("since"), Is.True);
+            Assert.That(lookup["since"], Is.EqualTo(_expected));
         }
     }
 }
