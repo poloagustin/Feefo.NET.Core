@@ -1,26 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
+﻿using System.Net;
 using System.Net.Http;
-using System.Net.Http.Formatting;
-using System.Net.Http.Headers;
-using System.Text;
 using System.Threading.Tasks;
 using Feefo.Responses;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Converters;
 
 namespace Feefo
 {
     public class FeefoClient
     {
         private readonly HttpMessageHandler _handler;
+        private readonly IQueryStringFactory _queryStringFactory;
         private readonly IFeefoSettings _feefoSettings;
 
-        public FeefoClient(HttpMessageHandler handler, IFeefoSettings feefoSettings)
+        public FeefoClient(HttpMessageHandler handler, IQueryStringFactory queryStringFactory, IFeefoSettings feefoSettings)
         {
             _handler = handler;
+            _queryStringFactory = queryStringFactory;
             _feefoSettings = feefoSettings;
         }
 
@@ -28,7 +22,7 @@ namespace Feefo
             : this(new HttpClientHandler
             {
                 AutomaticDecompression = DecompressionMethods.GZip | DecompressionMethods.Deflate
-            }, feefoSettings)
+            }, new QueryStringFactory(), feefoSettings)
         {
         }
 
@@ -44,8 +38,9 @@ namespace Feefo
         public async Task<FeefoClientResponse> GetFeedback()
         {
             var httpClient = CreateHttpClient();
+            var queryString = _queryStringFactory.Create(_feefoSettings.Logon);
 
-            var response = await httpClient.GetAsync($"?logon={_feefoSettings.Logon}&json=true")
+            var response = await httpClient.GetAsync(queryString)
                 .ConfigureAwait(false);
 
             response.EnsureSuccessStatusCode();
