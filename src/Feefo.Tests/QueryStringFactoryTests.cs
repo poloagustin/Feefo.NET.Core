@@ -22,7 +22,12 @@ namespace Feefo.Tests
         public void WhenCreatingAQueryStringFromALogon()
         {
             _logon = Guid.NewGuid().ToString();
-            _result = _factory.Create(_logon);
+            _result = _factory.Create(_logon, WithFeedbackRequest());
+        }
+
+        protected virtual FeedbackRequest WithFeedbackRequest()
+        {
+            return new FeedbackRequest();
         }
 
         [Test]
@@ -40,11 +45,35 @@ namespace Feefo.Tests
             Assert.That(lookup["json"], Is.EqualTo("true"));
         }
 
-        private IDictionary<string, string> GetQueryLookup()
+        protected IDictionary<string, string> GetQueryLookup()
         {
             return _result.Substring(1).Split('&')
                 .Select(pair => pair.Split('='))
                 .ToDictionary(x => x[0], x => x[1]);
+        }
+    }
+
+    public class QueryStringFactoryTestsWithRequest : QueryStringFactoryTests
+    {
+        private string _vendorRef;
+
+        protected override FeedbackRequest WithFeedbackRequest()
+        {
+            _vendorRef = Guid.NewGuid().ToString();
+
+            return new FeedbackRequest()
+            {
+                VendorRef = _vendorRef
+            };
+        }
+
+        [Test]
+        public void ThenTheQueryStringContainsVendorRef()
+        {
+            var lookup = GetQueryLookup();
+
+            Assert.That(lookup.ContainsKey("vendorref"), Is.True);
+            Assert.That(lookup["vendorref"], Is.EqualTo(_vendorRef));
         }
     }
 }

@@ -2,6 +2,6 @@
 {
     public interface IQueryStringFactory
     {
-        string Create(string logon);
+        string Create(string logon, FeedbackRequest feedbackRequest);
     }
 }
