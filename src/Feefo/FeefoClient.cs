@@ -56,14 +56,4 @@ namespace Feefo
             return new FeefoClientResponse(content.FeedbackList);
         }
     }
-
-    public class FeefoClientResponse
-    {
-        public FeefoClientResponse(FeedbackList feedbackList)
-        {
-            FeedbackList = feedbackList;
-        }
-
-        public FeedbackList FeedbackList { get; }
-    }
 }
