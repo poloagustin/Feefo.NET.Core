@@ -33,6 +33,20 @@ To fetch feedback from feefo we can call the `GetFeedbackAsync` method on the `F
 var response = await client.GetFeedbackAsync();
 ```
 
+You can also vary what Feefo sends back by passing in a `FeedbackRequest` object in to the `GetFeedbackAsync` method:
+
+```csharp
+var feedbackRequest = new FeedbackRequest()
+{
+    Limit = 50,
+    Mode = Mode.ServiceAndProduct,
+    Sort = new Sort(SortBy.Date, Order.Ascending),
+    Since = Since.Month
+};
+
+var response = await client.GetFeedbackAsync(feedbackRequest);
+```
+
 ### Client response
 The `response` contains a `FeedbackList` which contains a list of `Feedback` and `Summary`.
 
