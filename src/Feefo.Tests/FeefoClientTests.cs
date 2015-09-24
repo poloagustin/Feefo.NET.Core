@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Feefo.Requests;
 using Feefo.Responses;
 using Moq;
 using NUnit.Framework;
+using Mode = Feefo.Responses.Mode;
 
 namespace Feefo.Tests
 {
@@ -29,7 +31,7 @@ namespace Feefo.Tests
         [SetUp]
         public void WhenGettingFeedback()
         {
-            _result = _client.GetFeedbackAsync().Result;
+            _result = _client.GetFeedbackAsync(new FeedbackRequest()).Result;
         }
 
         [Test]

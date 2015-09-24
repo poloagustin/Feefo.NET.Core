@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IFeefoClient.cs" />
     <Compile Include="Requests\FeedbackRequest.cs" />
     <Compile Include="FeefoClient.cs" />
     <Compile Include="FeefoClientResponse.cs" />

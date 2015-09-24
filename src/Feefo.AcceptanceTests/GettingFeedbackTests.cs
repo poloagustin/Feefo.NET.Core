@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Security.Policy;
 using System.Threading.Tasks;
+using Feefo.Requests;
 using NUnit.Framework;
 
 namespace Feefo.AcceptanceTests
@@ -22,7 +23,14 @@ namespace Feefo.AcceptanceTests
         [SetUp]
         public void WhenGettingFeedback()
         {
-            _result = _client.GetFeedbackAsync().Result;
+            var feedbackRequest = new FeedbackRequest()
+            {
+                Limit = 50,
+                Mode = Mode.ServiceAndProduct,
+                Sort = new Sort(SortBy.Description, Order.Descending),
+                Since = Since.Month
+            };
+            _result = _client.GetFeedbackAsync(feedbackRequest).Result;
         }
 
         [Test]
