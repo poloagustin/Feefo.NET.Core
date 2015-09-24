@@ -70,6 +70,7 @@
     <Compile Include="Responses\VendorRef.cs" />
     <Compile Include="Requests\Since.cs" />
     <Compile Include="Requests\SortBy.cs" />
+    <Compile Include="ValueMaps.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

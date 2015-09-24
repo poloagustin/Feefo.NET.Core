@@ -55,6 +55,7 @@
     <Compile Include="FeedbackRequest.cs" />
     <Compile Include="FeefoClientTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QueryStringFactoryTests\QueryStringFactoryTestsWithAll.cs" />
     <Compile Include="QueryStringFactoryTests\QueryStringFactoryTests.cs" />
     <Compile Include="QueryStringFactoryTests\QueryStringFactoryTestsForVendorRef.cs" />
     <Compile Include="QueryStringFactoryTests\QueryStringFactoryTestsWithMode.cs" />
