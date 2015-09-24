@@ -36,7 +36,7 @@ namespace Feefo
             return httpClient;
         }
 
-        public async Task<FeefoClientResponse> GetFeedback()
+        public async Task<FeefoClientResponse> GetFeedbackAsync()
         {
             var httpClient = CreateHttpClient();
             var queryString = _queryStringFactory.Create(_feefoSettings.Logon, new FeedbackRequest());

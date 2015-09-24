@@ -22,7 +22,7 @@ namespace Feefo.AcceptanceTests
         [SetUp]
         public void WhenGettingFeedback()
         {
-            _result = _client.GetFeedback().Result;
+            _result = _client.GetFeedbackAsync().Result;
         }
 
         [Test]
