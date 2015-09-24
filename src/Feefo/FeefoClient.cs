@@ -1,5 +1,6 @@
 ﻿using System.Net;
 using System.Net.Http;
+using System.Threading;
 using System.Threading.Tasks;
 using Feefo.Requests;
 using Feefo.Responses;
@@ -36,17 +37,17 @@ namespace Feefo
             return httpClient;
         }
 
-        public async Task<FeefoClientResponse> GetFeedbackAsync()
+        public async Task<FeefoClientResponse> GetFeedbackAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
             var httpClient = CreateHttpClient();
             var queryString = _queryStringFactory.Create(_feefoSettings.Logon, new FeedbackRequest());
             
-            var response = await httpClient.GetAsync(queryString)
+            var response = await httpClient.GetAsync(queryString, cancellationToken)
                 .ConfigureAwait(false);
 
             response.EnsureSuccessStatusCode();
             
-            var content = await response.Content.ReadAsAsync<Rootobject>()
+            var content = await response.Content.ReadAsAsync<Rootobject>(cancellationToken)
                 .ConfigureAwait(false);
 
             return new FeefoClientResponse(content.FeedbackList);
