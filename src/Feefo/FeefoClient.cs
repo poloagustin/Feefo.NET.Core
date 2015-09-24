@@ -7,7 +7,7 @@ using Feefo.Responses;
 
 namespace Feefo
 {
-    public class FeefoClient
+    public class FeefoClient : IFeefoClient
     {
         private readonly HttpMessageHandler _handler;
         private readonly IQueryStringFactory _queryStringFactory;
@@ -37,10 +37,15 @@ namespace Feefo
             return httpClient;
         }
 
-        public async Task<FeefoClientResponse> GetFeedbackAsync(CancellationToken cancellationToken = default(CancellationToken))
+        public Task<FeefoClientResponse> GetFeedbackAsync(CancellationToken cancellationToken = default(CancellationToken))
+        {
+            return GetFeedbackAsync(new FeedbackRequest(), cancellationToken);
+        }
+
+        public async Task<FeefoClientResponse> GetFeedbackAsync(FeedbackRequest feedbackRequest, CancellationToken cancellationToken = default(CancellationToken))
         {
             var httpClient = CreateHttpClient();
-            var queryString = _queryStringFactory.Create(_feefoSettings.Logon, new FeedbackRequest());
+            var queryString = _queryStringFactory.Create(_feefoSettings.Logon, feedbackRequest);
             
             var response = await httpClient.GetAsync(queryString, cancellationToken)
                 .ConfigureAwait(false);
