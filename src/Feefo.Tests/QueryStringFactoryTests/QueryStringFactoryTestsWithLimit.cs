@@ -1,4 +1,5 @@
 using System.Linq;
+using Feefo.Requests;
 using NUnit.Framework;
 
 namespace Feefo.Tests.QueryStringFactoryTests
@@ -18,7 +19,7 @@ namespace Feefo.Tests.QueryStringFactoryTests
         }
 
         [Test]
-        public void ThenTheQueryStringContainsSortBy()
+        public void ThenTheQueryStringContainsLimit()
         {
             var lookup = GetQueryLookup();
 

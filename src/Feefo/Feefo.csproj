@@ -49,7 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FeedbackRequest.cs" />
+    <Compile Include="Requests\FeedbackRequest.cs" />
     <Compile Include="FeefoClient.cs" />
     <Compile Include="FeefoClientResponse.cs" />
     <Compile Include="FeefoSettings.cs" />
@@ -58,6 +58,7 @@
     <Compile Include="JsonConverters\SingleValueArrayConverter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QueryStringFactory.cs" />
+    <Compile Include="Requests\Mode.cs" />
     <Compile Include="Responses\Feedback.cs" />
     <Compile Include="Responses\FeedbackList.cs" />
     <Compile Include="Responses\FurtherCommentsThread.cs" />
@@ -67,17 +68,15 @@
     <Compile Include="Responses\RootObject.cs" />
     <Compile Include="Responses\Summary.cs" />
     <Compile Include="Responses\VendorRef.cs" />
-    <Compile Include="Since.cs" />
-    <Compile Include="SortBy.cs" />
+    <Compile Include="Requests\Since.cs" />
+    <Compile Include="Requests\SortBy.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
     <None Include="Feefo.nuspec" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Requests\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

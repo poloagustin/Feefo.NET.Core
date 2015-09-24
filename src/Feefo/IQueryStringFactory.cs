@@ -1,4 +1,6 @@
-﻿namespace Feefo
+﻿using Feefo.Requests;
+
+namespace Feefo
 {
     public interface IQueryStringFactory
     {

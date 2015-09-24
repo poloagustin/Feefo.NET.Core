@@ -1,4 +1,4 @@
-﻿namespace Feefo
+﻿namespace Feefo.Requests
 {
     public class FeedbackRequest
     {
@@ -26,8 +26,13 @@
         public Sort Sort { get; set; }
 
         /// <summary>
-        /// limit defines the number of returned feedback items to be the limit most recent. Its value must be a positive integer.
+        /// Limit defines the number of returned feedback items to be the limit most recent. Its value must be a positive integer.
         /// </summary>
         public int? Limit { get; set; }
+
+        /// <summary>
+        /// Mode determines which type of feedback data is returned.
+        /// </summary>
+        public Mode Mode { get; set; }
     }
 }

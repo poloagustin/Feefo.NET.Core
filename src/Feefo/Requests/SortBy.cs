@@ -1,4 +1,4 @@
-﻿namespace Feefo
+﻿namespace Feefo.Requests
 {
     public class Sort
     {

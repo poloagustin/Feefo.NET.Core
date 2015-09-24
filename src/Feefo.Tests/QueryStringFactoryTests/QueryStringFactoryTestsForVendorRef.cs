@@ -1,4 +1,5 @@
 using System;
+using Feefo.Requests;
 using NUnit.Framework;
 
 namespace Feefo.Tests.QueryStringFactoryTests

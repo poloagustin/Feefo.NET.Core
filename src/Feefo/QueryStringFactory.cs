@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Feefo.Requests;
 
 namespace Feefo
 {
@@ -34,6 +35,12 @@ namespace Feefo
                 query += $"&limit={feedbackRequest.Limit.Value}";
             }
 
+            if (feedbackRequest.Mode != Mode.None)
+            {
+                var mode = _modeValueMap[feedbackRequest.Mode];
+                query += $"&mode={mode}";
+            }
+
             return query;
         }
 
@@ -52,6 +59,15 @@ namespace Feefo
             { Since.Month, "month" },
             { Since.SixMonths, "6months" },
             { Since.Year, "year" }
+        };
+
+        private readonly IDictionary<Mode, string> _modeValueMap = new Dictionary<Mode, string>()
+        {
+            {Mode.Service, "service" },
+            {Mode.Product, "product" },
+            {Mode.ServiceAndProduct, "both" },
+            {Mode.ProductOnly, "productonly" },
+            {Mode.ProductCo, "productco" }
         };
     }
 }

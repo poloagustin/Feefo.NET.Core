@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Feefo.Requests;
 using NUnit.Framework;
 
 namespace Feefo.Tests.QueryStringFactoryTests
