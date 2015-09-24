@@ -24,5 +24,10 @@
         /// How the data will be sorted.
         /// </summary>
         public Sort Sort { get; set; }
+
+        /// <summary>
+        /// limit defines the number of returned feedback items to be the limit most recent. Its value must be a positive integer.
+        /// </summary>
+        public int? Limit { get; set; }
     }
 }

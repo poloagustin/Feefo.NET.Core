@@ -29,6 +29,11 @@ namespace Feefo
                 query += $"&sortby={sortBy}&order={order}";
             }
 
+            if (feedbackRequest.Limit.HasValue)
+            {
+                query += $"&limit={feedbackRequest.Limit.Value}";
+            }
+
             return query;
         }
 

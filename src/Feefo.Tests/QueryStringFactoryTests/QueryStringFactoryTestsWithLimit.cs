@@ -1,0 +1,29 @@
+using System.Linq;
+using NUnit.Framework;
+
+namespace Feefo.Tests.QueryStringFactoryTests
+{
+    [TestFixture]
+    public class QueryStringFactoryTestsWithLimit : QueryStringFactoryTests
+    {
+        private int _limit;
+
+        protected override FeedbackRequest WithFeedbackRequest()
+        {
+            _limit = 99;
+            return new FeedbackRequest()
+            {
+                Limit = _limit
+            };
+        }
+
+        [Test]
+        public void ThenTheQueryStringContainsSortBy()
+        {
+            var lookup = GetQueryLookup();
+
+            Assert.That(lookup.ContainsKey("limit"), Is.True);
+            Assert.That(lookup["limit"], Is.EqualTo(_limit.ToString()));
+        }
+    }
+}
