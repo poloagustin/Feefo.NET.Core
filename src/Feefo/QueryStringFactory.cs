@@ -21,11 +21,12 @@ namespace Feefo
                 query += $"&since={since}";
             }
 
-            if (feedbackRequest.SortBy != SortBy.None)
+            if (feedbackRequest.Sort != null)
             {
-                var since = _sortByValueMap[feedbackRequest.SortBy];
+                var sortBy = _sortByValueMap[feedbackRequest.Sort.SortBy];
+                var order = feedbackRequest.Sort.Order == Order.Ascending ? "asc" : "desc";
 
-                query += $"&sortby={since}";
+                query += $"&sortby={sortBy}&order={order}";
             }
 
             return query;

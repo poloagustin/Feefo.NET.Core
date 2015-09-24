@@ -21,8 +21,8 @@
         public Since Since { get; set; }
 
         /// <summary>
-        /// Sortby returns the results sorted by the required data. 
+        /// How the data will be sorted.
         /// </summary>
-        public SortBy SortBy { get; set; }
+        public Sort Sort { get; set; }
     }
 }
