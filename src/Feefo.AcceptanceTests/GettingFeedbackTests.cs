@@ -27,7 +27,7 @@ namespace Feefo.AcceptanceTests
             {
                 Limit = 50,
                 Mode = Mode.ServiceAndProduct,
-                Sort = new Sort(SortBy.Description, Order.Descending),
+                Sort = new Sort(SortBy.Date, Order.Ascending),
                 Since = Since.Month
             };
             _result = _client.GetFeedbackAsync(feedbackRequest).Result;

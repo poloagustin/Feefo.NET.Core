@@ -55,7 +55,7 @@ namespace Feefo
             var content = await response.Content.ReadAsAsync<Rootobject>(cancellationToken)
                 .ConfigureAwait(false);
 
-            return new FeefoClientResponse(content.FeedbackList);
+            return new FeefoClientResponse(content?.FeedbackList);
         }
     }
 }

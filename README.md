@@ -1,6 +1,11 @@
 # Feefo.NET
 A Simple Feefo .NET Client API Wrapper
 
+[![install from nuget](http://img.shields.io/nuget/v/Feefo.svg?style=flat-square)](https://www.nuget.org/packages/Feefo)
+[![downloads](http://img.shields.io/nuget/dt/Feefo.svg?style=flat-square)](https://www.nuget.org/packages/Feefo)
+[![Build status](https://ci.appveyor.com/api/projects/status/1pivqncn1tol0xvi/branch/master?svg=true)](https://ci.appveyor.com/project/kevbite/feefo-net/branch/master)
+
+
 ## Getting started
 Feefo.NET can be installed via the package manager console by executing the following commandlet
 
