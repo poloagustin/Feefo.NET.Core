@@ -3,7 +3,7 @@
     public class FeedbackRequest
     {
         /// <summary>
-        /// vendorref is the product search code for product feedback. Each order item submitted to Feefo is
+        /// VendorRef is the product search code for product feedback. Each order item submitted to Feefo is
         /// submitted with a product code.If this parameter is specified, then only feedback items associated
         /// with the product code supplied will be shown.This is useful when displaying feedback on a product
         /// page.
@@ -16,8 +16,13 @@
         public string VendorRef { get; set; }
 
         /// <summary>
-        /// since is the feedback data time period that should be returned.
+        /// Since is the feedback data time period that should be returned.
         /// </summary>
         public Since Since { get; set; }
+
+        /// <summary>
+        /// Sortby returns the results sorted by the required data. 
+        /// </summary>
+        public SortBy SortBy { get; set; }
     }
 }

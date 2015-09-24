@@ -55,7 +55,10 @@
     <Compile Include="FeedbackRequest.cs" />
     <Compile Include="FeefoClientTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="QueryStringFactoryTests.cs" />
+    <Compile Include="QueryStringFactoryTests\QueryStringFactoryTests.cs" />
+    <Compile Include="QueryStringFactoryTests\QueryStringFactoryTestsForVendorRef.cs" />
+    <Compile Include="QueryStringFactoryTests\QueryStringFactoryTestsWithSortBy.cs" />
+    <Compile Include="QueryStringFactoryTests\QueryStringFactoryTestsWithSince.cs" />
     <Compile Include="ResourceHelper.cs" />
     <Compile Include="StubHttpMessageHandler.cs" />
   </ItemGroup>

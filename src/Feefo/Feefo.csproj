@@ -68,6 +68,7 @@
     <Compile Include="Responses\Summary.cs" />
     <Compile Include="Responses\VendorRef.cs" />
     <Compile Include="Since.cs" />
+    <Compile Include="SortBy.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
