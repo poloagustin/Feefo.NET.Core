@@ -1,8 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Feefo.Requests;
 using Feefo.Responses;
+using Moq;
 using NUnit.Framework;
+using Mode = Feefo.Responses.Mode;
 
 namespace Feefo.Tests
 {
@@ -20,15 +23,15 @@ namespace Feefo.Tests
             var feefoSettings = new FeefoSettings(new Uri(baseUri), "www.examplesupplier.com");
 
             _httpMessageHandler = new StubHttpMessageHandler(
-                new Uri($"{baseUri}?logon={feefoSettings.Logon}&json=true"),
+                new Uri(baseUri),
                 new ResourceHelper().GetStringResource("Feefo.Tests.FeefoRssFeed.json"));
-            _client = new FeefoClient(_httpMessageHandler, feefoSettings);
+            _client = new FeefoClient(_httpMessageHandler, Mock.Of<IQueryStringFactory>(), feefoSettings);
         }
 
         [SetUp]
         public void WhenGettingFeedback()
         {
-            _result = _client.GetFeedback().Result;
+            _result = _client.GetFeedbackAsync(new FeedbackRequest()).Result;
         }
 
         [Test]

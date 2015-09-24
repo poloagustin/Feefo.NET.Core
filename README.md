@@ -22,10 +22,10 @@ var feefoSettings = new FeefoSettings(new Uri("http://feefo.examplesupplier.com/
 ```
 
 ## Fetching feedback
-To fetch feedback from feefo we can call the `GetFeedback` method on the `FeefoClient`:
+To fetch feedback from feefo we can call the `GetFeedbackAsync` method on the `FeefoClient`:
 
 ```csharp
-var response = await client.GetFeedback();
+var response = await client.GetFeedbackAsync();
 ```
 
 ### Client response
