@@ -44,5 +44,11 @@ namespace Feefo.AcceptanceTests
         {
             Assert.That(_result.FeedbackList.Feedback, Is.Not.Empty);
         }
+
+        [TestFixtureTearDown]
+        public void Kill()
+        {
+            _client.Dispose();
+        }
     }
 }

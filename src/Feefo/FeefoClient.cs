@@ -1,4 +1,5 @@
-﻿using System.Net;
+﻿using System;
+using System.Net;
 using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
@@ -7,7 +8,7 @@ using Feefo.Responses;
 
 namespace Feefo
 {
-    public class FeefoClient : IFeefoClient
+    public class FeefoClient : IFeefoClient, IDisposable
     {
         private readonly HttpMessageHandler _handler;
         private readonly IQueryStringFactory _queryStringFactory;
@@ -46,16 +47,21 @@ namespace Feefo
         {
             var httpClient = CreateHttpClient();
             var queryString = _queryStringFactory.Create(_feefoSettings.Logon, feedbackRequest);
-            
+
             var response = await httpClient.GetAsync(queryString, cancellationToken)
                 .ConfigureAwait(false);
 
             response.EnsureSuccessStatusCode();
-            
+
             var content = await response.Content.ReadAsAsync<Rootobject>(cancellationToken)
                 .ConfigureAwait(false);
 
             return new FeefoClientResponse(content?.FeedbackList);
+        }
+
+        public void Dispose()
+        {
+            _handler.Dispose();
         }
     }
 }

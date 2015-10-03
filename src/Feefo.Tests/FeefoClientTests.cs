@@ -96,6 +96,12 @@ namespace Feefo.Tests
             }
         }
 
+        [TestFixtureTearDown]
+        public void Kill()
+        {
+            _client.Dispose();
+        }
+
         public List<Feedback> GetExpectedFeedback()
         {
             return new List<Feedback>()
