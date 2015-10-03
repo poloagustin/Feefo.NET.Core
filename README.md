@@ -1,5 +1,5 @@
 # Feefo.NET
-A Simple Feefo .NET Client API Wrapper
+[!(https://raw.githubusercontent.com/kevbite/Feefo.NET/master/feefo.png)] A Simple Feefo .NET Client API Wrapper
 
 [![install from nuget](http://img.shields.io/nuget/v/Feefo.svg?style=flat-square)](https://www.nuget.org/packages/Feefo)
 [![downloads](http://img.shields.io/nuget/dt/Feefo.svg?style=flat-square)](https://www.nuget.org/packages/Feefo)
