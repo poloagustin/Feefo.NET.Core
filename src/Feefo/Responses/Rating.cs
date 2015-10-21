@@ -6,7 +6,7 @@ namespace Feefo.Responses
 {
     public enum Rating
     {
-        [EnumMember(Value = "NA")]
+        [EnumMember(Value = "")]
         Unknown = 0,
         [EnumMember(Value = "--")]
         Bad = 1,

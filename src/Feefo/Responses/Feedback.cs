@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using Feefo.JsonConverters;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
@@ -7,6 +8,10 @@ namespace Feefo.Responses
 {
     public class Feedback
     {
+        public Feedback()
+        {
+            FurtherCommentsThread = new List<FurtherCommentsThread>();
+        }
         /// <summary>
         /// Integer representing the position of this item of feedback in the returned results. This does not uniquely identify the feedback item; it only indicates its position in the list of returned feedbacks.
         /// </summary>
@@ -95,7 +100,8 @@ namespace Feefo.Responses
         /// Contains all vendor comments, and all follow-up customer comments.
         /// </summary>
         [JsonProperty(PropertyName = "FURTHERCOMMENTSTHREAD")]
-        public FurtherCommentsThread FurtherCommentsThread { get; set; }
+        [JsonConverter(typeof(SingleValueArrayConverter<FurtherCommentsThread>))]
+        public List<FurtherCommentsThread> FurtherCommentsThread { get; set; }
 
         /// <summary>
         /// The latest product review.
