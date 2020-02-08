@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using Feefo.Requests;
 using Feefo.Responses;
 using Moq;
@@ -16,7 +17,7 @@ namespace Feefo.Tests
         private FeefoClient _client;
         private FeefoClientResponse _result;
 
-        [TestFixtureSetUp]
+        [OneTimeSetUp]
         public void GivenAFeefoClientWithAFakeClientHandler()
         {
             var baseUri = "http://example.kevsoft.net/feefo.jsp";
@@ -24,8 +25,11 @@ namespace Feefo.Tests
 
             _httpMessageHandler = new StubHttpMessageHandler(
                 new Uri(baseUri),
-                new ResourceHelper().GetStringResource("Feefo.Tests.FeefoRssFeed.json"));
-            _client = new FeefoClient(_httpMessageHandler, Mock.Of<IQueryStringFactory>(), feefoSettings);
+                new ResourceHelper().GetStringResource("FeefoRssFeed.json"));
+            var mockFactory = new Mock<IHttpClientFactory>();
+            var httpClient = new HttpClient(_httpMessageHandler);
+            mockFactory.Setup(_ => _.CreateClient(It.IsAny<string>())).Returns(httpClient);
+            _client = new FeefoClient(mockFactory.Object,_httpMessageHandler, Mock.Of<IQueryStringFactory>(), feefoSettings);
         }
 
         [SetUp]
@@ -122,10 +126,13 @@ namespace Feefo.Tests
             }
         }
 
-        [TestFixtureTearDown]
+        [OneTimeTearDown]
         public void Kill()
         {
-            _client.Dispose();
+            if (_client!=null)
+            {
+                _client.Dispose();
+            }
         }
 
         public List<Feedback> GetExpectedFeedback()

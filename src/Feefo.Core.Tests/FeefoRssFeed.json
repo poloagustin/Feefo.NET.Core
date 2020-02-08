@@ -1,0 +1,161 @@
+﻿{"FEEDBACKLIST": {
+  "FEEDBACK": [
+    {
+      "COUNT": 1,
+      "CUSTOMERCOMMENT": "Service rating : Really good service<br/>Product : Good camera for the price.",
+      "DATE": "10-Sep-2015",
+      "DESCRIPTION": "Konica Minolta Z20",
+      "FACEBOOKSHARELINK": "http://www.facebook.com/sharer.php?u=http%3A%2F%2Fwww.feefo.com%2FGB%2Fen%2Freviews%2FExample-Supplier-Ltd%2F%3Fid%3D13%26servicefeedbackid%3D7445488",
+      "FEEDBACKID": 7445488,
+      "HREVIEWDATE": "2015-09-10T11:25:58",
+      "HREVIEWRATING": 4,
+      "LINK": "http://www.examplesupplier.com/product_info.php?products_id=1333OSCommerceOSCommerceOSCommerce",
+      "PRODUCTCODE": 133,
+      "PRODUCTRATING": "+",
+      "READMOREURL": "http://www.feefo.com/GB/en/reviews/Example-Supplier-Ltd/?id=13&servicefeedbackid=7445488",
+      "SERVICERATING": "++",
+      "SHORTCUSTOMERCOMMENT": "Service rating : Really good service<br/>Product : Good camera for the price."
+    },
+    {
+      "COUNT": 2,
+      "CUSTOMERCOMMENT": "Service rating : This is a test service reviewwwwwwww0000000000000000000001<br/>Product : This is a test product reviewwwwwwww0000000000000000000001",
+      "DATE": "08-Sep-2015",
+      "DESCRIPTION": "this is a test",
+      "FACEBOOKSHARELINK": "http://www.facebook.com/sharer.php?u=http%3A%2F%2Fwww.feefo.com%2FGB%2Fen%2Freviews%2FExample-Supplier-Ltd%2F%3Fid%3D13%26servicefeedbackid%3D7445479",
+      "FEEDBACKID": 7445479,
+      "FURTHERCOMMENTSTHREAD": {
+        "POST": [
+          {
+            "DATE": "08-Sep-2015",
+            "VENDORCOMMENT": "This is a reply comment through the UI.<br><br>Adrian"
+          },
+          {
+            "CUSTOMERCOMMENT": "this is a re-rated review - PRODUCT",
+            "DATE": "08-Sep-2015",
+            "PRODUCTRATING": "++",
+            "SERVICERATING": "++"
+          }
+        ]
+      },
+      "HREVIEWDATE": "2015-09-08T14:57:50",
+      "LINK": "http://www.examplesupplier.com/product_info.php?products_id=Comment013OSCommerceOSCommerce",
+      "PRODUCTCODE": "Comment01",
+      "PRODUCTLATEST": "++",
+      "PRODUCTRATING": "W",
+      "READMOREURL": "http://www.feefo.com/GB/en/reviews/Example-Supplier-Ltd/?id=13&servicefeedbackid=7445479",
+      "SERVICELATEST": "++",
+      "SERVICERATING": "W",
+      "SHORTCUSTOMERCOMMENT": "Service rating : This is a test service reviewwwwwwww0000000000000000000001<br/>Product : This is a test product reviewwwwwwww0000000000000000000001",
+      "SHORTVENDORCOMMENT": "This is a reply comment through the UI.<br/><br/>Adrian",
+      "VENDORCOMMENT": "This is a reply comment through the UI.<br/><br/>Adrian"
+    },
+    {
+      "COUNT": 3,
+      "CUSTOMERCOMMENT": "Service rating : I had an excellent experience<br/>Product : Great! It's the best thing ever,",
+      "DATE": "08-Jul-2015",
+      "DESCRIPTION": "Falcon Mach V",
+      "FACEBOOKSHARELINK": "http://www.facebook.com/sharer.php?u=http%3A%2F%2Fwww.feefo.com%2FGB%2Fen%2Freviews%2FExample-Supplier-Ltd%2F%3Fid%3D13%26servicefeedbackid%3D7445404",
+      "FEEDBACKID": 7445404,
+      "FURTHERCOMMENTSTHREAD": {
+        "POST": [
+          {
+            "DATE": "24-Jul-2015",
+            "VENDORCOMMENT": "Product :test<br><br>Adrian"
+          },
+          {
+            "DATE": "27-Jul-2015",
+            "VENDORCOMMENT": "this is a test comment<br><br>Adrian"
+          },
+          {
+            "DATE": "27-Jul-2015",
+            "VENDORCOMMENT": "Product :this is a test for the second time.<br><br>Adrian"
+          }
+        ]
+      },
+      "HREVIEWDATE": "2015-07-08T21:57:22",
+      "HREVIEWRATING": 5,
+      "LINK": "http://www.examplesupplier.com/product_info.php?products_id=1323OSCommerceOSCommerce",
+      "PRODUCTCODE": 132,
+      "PRODUCTRATING": "++",
+      "READMOREURL": "http://www.feefo.com/GB/en/reviews/Example-Supplier-Ltd/?id=13&servicefeedbackid=7445404",
+      "SERVICERATING": "++",
+      "SHORTCUSTOMERCOMMENT": "Service rating : I had an excellent experience<br/>Product : Great! It's the best thing ever,",
+      "SHORTVENDORCOMMENT": "test<br/><br/>Adrian<br/><br/>this is a test comment<br/><br/>Adrian<br/><br/>this is a test for the second time.<br/><br/>Adrian",
+      "VENDORCOMMENT": "test<br/><br/>Adrian<br/><br/>this is a test comment<br/><br/>Adrian<br/><br/>this is a test for the second time.<br/><br/>Adrian"
+    },
+    {
+      "COUNT": 4,
+      "CUSTOMERCOMMENT": "As Above",
+      "DATE": "17-Apr-2015",
+      "DESCRIPTION": "Test",
+      "FACEBOOKSHARELINK": "http://www.facebook.com/sharer.php?u=http%3A%2F%2Fwww.feefo.com%2FGB%2Fen%2Freviews%2FExample-Supplier-Ltd%2F%3Fid%3D13%26servicefeedbackid%3D7445167",
+      "FEEDBACKID": 7445167,
+      "FURTHERCOMMENTSTHREAD": {
+        "POST": {
+          "DATE": "17-Apr-2015",
+          "VENDORCOMMENT": "Test<br><br>Adrian"
+        }
+      },
+      "HREVIEWDATE": "2015-04-17T09:52:13",
+      "HREVIEWRATING": 5,
+      "LINK": "http://www.examplesupplier.com/product_info.php?products_id=Test3OSCommerceOSCommerce",
+      "PRODUCTCODE": "Test",
+      "PRODUCTRATING": "++",
+      "READMOREURL": "http://www.feefo.com/GB/en/reviews/Example-Supplier-Ltd/?id=13&servicefeedbackid=7445167",
+      "SERVICERATING": "++",
+      "SHORTCUSTOMERCOMMENT": "As Above",
+      "SHORTVENDORCOMMENT": "Test<br/><br/>Adrian",
+      "VENDORCOMMENT": "Test<br/><br/>Adrian"
+    },
+    {
+      "COUNT": 5,
+      "CUSTOMERCOMMENT": "As Above",
+      "DATE": "17-Apr-2015",
+      "DESCRIPTION": "Test",
+      "FACEBOOKSHARELINK": "http://www.facebook.com/sharer.php?u=http%3A%2F%2Fwww.feefo.com%2FGB%2Fen%2Freviews%2FExample-Supplier-Ltd%2F%3Fid%3D13%26servicefeedbackid%3D7445167",
+      "FEEDBACKID": 1345261,
+      "FURTHERCOMMENTSTHREAD": [
+        {
+          "created": 1442929897246,
+          "sender": "MERCHANT",
+          "content": "This is a weird comments thread but its possible..."
+        }
+      ],
+      "HREVIEWDATE": "2015-04-17T09:52:13",
+      "HREVIEWRATING": 5,
+      "LINK": "http://www.examplesupplier.com/product_info.php?products_id=Test3OSCommerceOSCommerce",
+      "PRODUCTCODE": "Test",
+      "PRODUCTRATING": "++",
+      "READMOREURL": "http://www.feefo.com/GB/en/reviews/Example-Supplier-Ltd/?id=13&servicefeedbackid=7445167",
+      "SERVICERATING": "++",
+      "SHORTCUSTOMERCOMMENT": "As Above",
+      "SHORTVENDORCOMMENT": "Test<br/><br/>Adrian",
+      "VENDORCOMMENT": "Test<br/><br/>Adrian"
+    }
+  ],
+    "SUMMARY": {
+        "AVERAGE": 85,
+        "BEST": 100,
+        "COUNT": 3863,
+        "FEEDGENERATION": "Tue Sep 15 22:20:39 BST 2015",
+        "LIMIT": 20,
+        "MODE": "service",
+        "PRODUCTBAD": 323,
+        "PRODUCTEXCELLENT": 1009,
+        "PRODUCTGOOD": 1233,
+        "PRODUCTPOOR": 308,
+        "SERVICEBAD": 426,
+        "SERVICEEXCELLENT": 5798,
+        "SERVICEGOOD": 1084,
+        "SERVICEPOOR": 203,
+        "START": 1,
+        "SUPPLIERLOGO": "http://www.feefo.com/feefo/getnonpublicfile.jsp?vendorimage=13&vendorimageext=file.png",
+        "TITLE": "Example Supplier Ltd.",
+        "TOTALPRODUCTCOUNT": 2890,
+        "TOTALRESPONSES": 3871,
+        "TOTALSERVICECOUNT": 3866,
+        "VENDORLOGON": "www.examplesupplier.com",
+        "VENDORREF": {},
+        "WORST": 0
+    }
+}}
