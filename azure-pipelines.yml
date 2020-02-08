@@ -9,10 +9,14 @@ trigger:
 pool:
   vmImage: 'ubuntu-latest'
 
-
+variables:
+- name: BuildConfiguration
+  value: Release
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
+- task: UseDotNet@2
+  inputs:
+    packageType: 'sdk'
+    version: '3.1'
 - script: dotnet restore
   displayName: 'Restore dependencies'
 - script: dotnet build
