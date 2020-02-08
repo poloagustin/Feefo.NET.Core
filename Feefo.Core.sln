@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Feefo.Core", "src\Feefo.Cor
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Feefo.Core.Tests", "src\Feefo.Core.Tests\Feefo.Core.Tests.csproj", "{C4CBCFB2-1204-4757-AA2F-22E251B527CB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Feefo.Core.AcceptanceTests", "src\Feefo.Core.AcceptanceTests\Feefo.Core.AcceptanceTests.csproj", "{FD2F06CC-4381-4603-BD99-7F5768E7241F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -46,9 +48,22 @@ Global
 		{C4CBCFB2-1204-4757-AA2F-22E251B527CB}.Release|x64.Build.0 = Release|Any CPU
 		{C4CBCFB2-1204-4757-AA2F-22E251B527CB}.Release|x86.ActiveCfg = Release|Any CPU
 		{C4CBCFB2-1204-4757-AA2F-22E251B527CB}.Release|x86.Build.0 = Release|Any CPU
+		{FD2F06CC-4381-4603-BD99-7F5768E7241F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD2F06CC-4381-4603-BD99-7F5768E7241F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD2F06CC-4381-4603-BD99-7F5768E7241F}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{FD2F06CC-4381-4603-BD99-7F5768E7241F}.Debug|x64.Build.0 = Debug|Any CPU
+		{FD2F06CC-4381-4603-BD99-7F5768E7241F}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{FD2F06CC-4381-4603-BD99-7F5768E7241F}.Debug|x86.Build.0 = Debug|Any CPU
+		{FD2F06CC-4381-4603-BD99-7F5768E7241F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD2F06CC-4381-4603-BD99-7F5768E7241F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD2F06CC-4381-4603-BD99-7F5768E7241F}.Release|x64.ActiveCfg = Release|Any CPU
+		{FD2F06CC-4381-4603-BD99-7F5768E7241F}.Release|x64.Build.0 = Release|Any CPU
+		{FD2F06CC-4381-4603-BD99-7F5768E7241F}.Release|x86.ActiveCfg = Release|Any CPU
+		{FD2F06CC-4381-4603-BD99-7F5768E7241F}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{A9E316F6-1CC9-4538-B895-14F2F1748BE7} = {34068DAE-9ED2-4E07-9D9A-FDA93ADE6447}
 		{C4CBCFB2-1204-4757-AA2F-22E251B527CB} = {34068DAE-9ED2-4E07-9D9A-FDA93ADE6447}
+		{FD2F06CC-4381-4603-BD99-7F5768E7241F} = {34068DAE-9ED2-4E07-9D9A-FDA93ADE6447}
 	EndGlobalSection
 EndGlobal

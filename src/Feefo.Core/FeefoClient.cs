@@ -11,21 +11,19 @@ namespace Feefo
 {
     public class FeefoClient : IFeefoClient, IDisposable
     {
-        private readonly IHttpClientFactory _httpClientFactory;
         private readonly HttpMessageHandler _handler;
         private readonly IQueryStringFactory _queryStringFactory;
         private readonly IFeefoSettings _feefoSettings;
 
-        public FeefoClient(IHttpClientFactory httpClientFactory, HttpMessageHandler handler, IQueryStringFactory queryStringFactory, IFeefoSettings feefoSettings)
+        public FeefoClient(HttpMessageHandler handler, IQueryStringFactory queryStringFactory, IFeefoSettings feefoSettings)
         {
-            _httpClientFactory = httpClientFactory;
             _handler = handler;
             _queryStringFactory = queryStringFactory;
             _feefoSettings = feefoSettings;
         }
 
-        public FeefoClient(IHttpClientFactory httpClientFactory, IFeefoSettings feefoSettings)
-            : this(httpClientFactory,new HttpClientHandler
+        public FeefoClient(IFeefoSettings feefoSettings)
+            : this(new HttpClientHandler
             {
                 AutomaticDecompression = DecompressionMethods.GZip | DecompressionMethods.Deflate
             }, new QueryStringFactory(), feefoSettings)
@@ -34,8 +32,10 @@ namespace Feefo
 
         private HttpClient CreateHttpClient()
         {
-            var httpClient = _httpClientFactory.CreateClient();
-            httpClient.BaseAddress = _feefoSettings.BaseUri;
+            var httpClient = new HttpClient(_handler)
+            {
+                BaseAddress = _feefoSettings.BaseUri
+            };
             return httpClient;
         }
 

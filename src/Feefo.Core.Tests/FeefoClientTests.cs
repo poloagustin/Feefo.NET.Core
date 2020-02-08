@@ -26,10 +26,7 @@ namespace Feefo.Tests
             _httpMessageHandler = new StubHttpMessageHandler(
                 new Uri(baseUri),
                 new ResourceHelper().GetStringResource("FeefoRssFeed.json"));
-            var mockFactory = new Mock<IHttpClientFactory>();
-            var httpClient = new HttpClient(_httpMessageHandler);
-            mockFactory.Setup(_ => _.CreateClient(It.IsAny<string>())).Returns(httpClient);
-            _client = new FeefoClient(mockFactory.Object,_httpMessageHandler, Mock.Of<IQueryStringFactory>(), feefoSettings);
+            _client = new FeefoClient(_httpMessageHandler, Mock.Of<IQueryStringFactory>(), feefoSettings);
         }
 
         [SetUp]

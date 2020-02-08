@@ -12,7 +12,7 @@ namespace Feefo.AcceptanceTests
         private FeefoClient _client;
         private FeefoClientResponse _result;
 
-        [TestFixtureSetUp]
+        [OneTimeSetUp]
         public void GivenAFeefoClientWithAnExampleSupplier()
         {
             var feefoSettings = new FeefoSettings("www.examplesupplier.com");
@@ -45,7 +45,7 @@ namespace Feefo.AcceptanceTests
             Assert.That(_result.FeedbackList.Feedback, Is.Not.Empty);
         }
 
-        [TestFixtureTearDown]
+        [OneTimeTearDown]
         public void Kill()
         {
             _client.Dispose();
