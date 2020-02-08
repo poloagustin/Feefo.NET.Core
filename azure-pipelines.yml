@@ -1,0 +1,25 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- master
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+variables:
+- name: BuildConfiguration
+  value: Release
+steps:
+- task: UseDotNet@2
+  inputs:
+    packageType: 'sdk'
+    version: '3.1'
+- script: dotnet restore
+  displayName: 'Restore dependencies'
+- script: dotnet build
+  displayName: 'Build solution'
+- script: dotnet test .\src\Feefo.Core.Tests\Feefo.Core.Tests.csproj
+  displayName: 'Run Unit Tests'
