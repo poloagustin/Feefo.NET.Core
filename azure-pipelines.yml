@@ -17,6 +17,9 @@ steps:
     inputs:
       packageType: "sdk"
       version: "3.x"
+  - task: NuGetAuthenticate@0
+    inputs:
+      nuGetServiceConnections: 'nuget'
   - script: dotnet restore
     displayName: "Restore dependencies"
   - script: dotnet build
@@ -31,9 +34,15 @@ steps:
       majorVersion: '0'
       minorVersion: '0'
       patchVersion: '0'
-  - task: DotNetCoreCLI@2
+  # - task: DotNetCoreCLI@2
+  #   inputs:
+  #     command: 'push'
+  #     packagesToPush: '$(Build.ArtifactStagingDirectory)/*.nupkg'
+  #     nuGetFeedType: 'external'
+  #     publishFeedCredentials: 'nuget'
+  - task: NuGetCommand@2
     inputs:
       command: 'push'
-      packagesToPush: '$(Build.ArtifactStagingDirectory)/*.nupkg'
+      packagesToPush: '$(Build.ArtifactStagingDirectory)/**/*.nupkg;!$(Build.ArtifactStagingDirectory)/**/*.symbols.nupkg'
       nuGetFeedType: 'external'
       publishFeedCredentials: 'nuget'
