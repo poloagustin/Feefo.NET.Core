@@ -1,4 +1,4 @@
-# Feefo.NET
+# Feefo.NET.Core
 
 A Simple Feefo .NET Core Client API Wrapper
 
