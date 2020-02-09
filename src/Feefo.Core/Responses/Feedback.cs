@@ -1,10 +1,10 @@
 using System;
 using System.Collections.Generic;
-using Feefo.JsonConverters;
+using Feefo.Core.JsonConverters;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
-namespace Feefo.Responses
+namespace Feefo.Core.Responses
 {
     public class Feedback
     {

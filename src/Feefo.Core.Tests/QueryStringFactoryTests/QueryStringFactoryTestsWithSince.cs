@@ -1,7 +1,7 @@
-using Feefo.Requests;
+using Feefo.Core.Requests;
 using NUnit.Framework;
 
-namespace Feefo.Tests.QueryStringFactoryTests
+namespace Feefo.Core.Tests.QueryStringFactoryTests
 {
     [TestFixture(Since.Week, "week")]
     [TestFixture(Since.Month, "month")]

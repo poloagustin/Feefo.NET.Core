@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
-using Feefo.JsonConverters;
+using Feefo.Core.JsonConverters;
 using Newtonsoft.Json;
 
-namespace Feefo.Responses
+namespace Feefo.Core.Responses
 {
     public class FurtherCommentsThread
     {

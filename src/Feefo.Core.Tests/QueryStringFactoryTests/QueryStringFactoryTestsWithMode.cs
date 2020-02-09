@@ -1,8 +1,8 @@
 using System.Linq;
-using Feefo.Requests;
+using Feefo.Core.Requests;
 using NUnit.Framework;
 
-namespace Feefo.Tests.QueryStringFactoryTests
+namespace Feefo.Core.Tests.QueryStringFactoryTests
 {
     [TestFixture(Mode.Service, "service")]
     [TestFixture(Mode.Product, "product")]

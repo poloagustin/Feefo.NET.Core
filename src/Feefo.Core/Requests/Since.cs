@@ -1,4 +1,4 @@
-﻿namespace Feefo.Requests
+﻿namespace Feefo.Core.Requests
 {
     public enum Since
     {

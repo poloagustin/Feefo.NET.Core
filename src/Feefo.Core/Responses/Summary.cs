@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
-namespace Feefo.Responses
+namespace Feefo.Core.Responses
 {
     public class Summary
     {

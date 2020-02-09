@@ -1,8 +1,8 @@
 ﻿using System.Threading;
 using System.Threading.Tasks;
-using Feefo.Requests;
+using Feefo.Core.Requests;
 
-namespace Feefo
+namespace Feefo.Core
 {
     public interface IFeefoClient
     {

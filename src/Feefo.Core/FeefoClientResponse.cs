@@ -1,6 +1,6 @@
-﻿using Feefo.Responses;
+﻿using Feefo.Core.Responses;
 
-namespace Feefo
+namespace Feefo.Core
 {
     public class FeefoClientResponse
     {

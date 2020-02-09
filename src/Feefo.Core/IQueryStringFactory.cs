@@ -1,6 +1,6 @@
-﻿using Feefo.Requests;
+﻿using Feefo.Core.Requests;
 
-namespace Feefo
+namespace Feefo.Core
 {
     public interface IQueryStringFactory
     {

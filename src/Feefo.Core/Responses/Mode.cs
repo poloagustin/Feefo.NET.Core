@@ -1,6 +1,6 @@
 ﻿using System.Runtime.Serialization;
 
-namespace Feefo.Responses
+namespace Feefo.Core.Responses
 {
     public enum Mode
     {

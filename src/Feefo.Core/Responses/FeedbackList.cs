@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using Newtonsoft.Json;
 
-namespace Feefo.Responses
+namespace Feefo.Core.Responses
 {
     public class FeedbackList
     {

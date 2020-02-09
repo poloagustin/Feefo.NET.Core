@@ -1,4 +1,4 @@
-﻿namespace Feefo.Responses
+﻿namespace Feefo.Core.Responses
 {
     public class VendorRef
     {

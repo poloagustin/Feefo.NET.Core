@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using Feefo.Requests;
+using Feefo.Core.Requests;
 
-namespace Feefo
+namespace Feefo.Core
 {
     public class ValueMaps
     {

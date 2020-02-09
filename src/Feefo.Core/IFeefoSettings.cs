@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Feefo
+namespace Feefo.Core
 {
     public interface IFeefoSettings
     {

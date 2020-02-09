@@ -1,7 +1,6 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
-namespace Feefo
+namespace Feefo.Core
 {
     public static class FeefoDefaults
     {

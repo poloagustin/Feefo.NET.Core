@@ -1,7 +1,7 @@
 using System;
 using System.IO;
 
-namespace Feefo.Tests
+namespace Feefo.Core.Tests
 {
     public class ResourceHelper
     {

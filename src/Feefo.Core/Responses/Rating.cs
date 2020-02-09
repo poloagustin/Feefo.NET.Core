@@ -1,8 +1,6 @@
 using System.Runtime.Serialization;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Converters;
 
-namespace Feefo.Responses
+namespace Feefo.Core.Responses
 {
     public enum Rating
     {

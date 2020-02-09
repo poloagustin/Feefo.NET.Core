@@ -1,14 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net.Http;
-using Feefo.Requests;
-using Feefo.Responses;
+using Feefo.Core.Requests;
+using Feefo.Core.Responses;
 using Moq;
 using NUnit.Framework;
-using Mode = Feefo.Responses.Mode;
+using Mode = Feefo.Core.Responses.Mode;
 
-namespace Feefo.Tests
+namespace Feefo.Core.Tests
 {
     [TestFixture]
     public class FeefoClientTests

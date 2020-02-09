@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace Feefo.Responses
+namespace Feefo.Core.Responses
 {
 
     public class Rootobject

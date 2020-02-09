@@ -3,11 +3,11 @@ using System.Net;
 using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
-using Feefo.Requests;
-using Feefo.Responses;
+using Feefo.Core.Requests;
+using Feefo.Core.Responses;
 using Newtonsoft.Json.Linq;
 
-namespace Feefo
+namespace Feefo.Core
 {
     public class FeefoClient : IFeefoClient, IDisposable
     {

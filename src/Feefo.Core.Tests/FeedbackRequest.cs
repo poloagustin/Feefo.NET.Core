@@ -1,4 +1,4 @@
-﻿namespace Feefo.Tests
+﻿namespace Feefo.Core.Tests
 {
 
 }

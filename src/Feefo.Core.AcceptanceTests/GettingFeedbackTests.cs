@@ -1,10 +1,7 @@
-﻿using System;
-using System.Security.Policy;
-using System.Threading.Tasks;
-using Feefo.Requests;
+﻿using Feefo.Core.Requests;
 using NUnit.Framework;
 
-namespace Feefo.AcceptanceTests
+namespace Feefo.Core.AcceptanceTests
 {
     [TestFixture]
     public class GettingFeedbackTests
