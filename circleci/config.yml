@@ -1,0 +1,105 @@
+version: 2.1
+executors:
+  dotnet-executor:
+    docker:
+      - image: mct.microsoft.com/dotnet/core/sdk:3.1
+orbs:
+jobs:
+  install-deps:
+    executor: dotnet-executor
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - dependency-cache-v0-{{ .Branch }}-{{ checksum "src/Feefo.Core/Feefo.Core.csproj" }}
+      - run:
+          name: Install Dependencies
+          command: dotnet restore Feefo.Core.sln
+      - save_cache:
+          paths:
+            - ~/.nuget/packages
+          key: dependency-cache-v0-{{ .Branch }}-{{ checksum "src/Feefo.Core/Feefo.Core.csproj" }}
+      - persist_to_workspace:
+          root: .
+          paths:
+            - .
+  build:
+    executor: dotnet-executor
+    steps:
+      - attach_workspace:
+          at: .
+      - run:
+          name: Build Solution
+          command: dotnet build Feefo.Core.sln --configuration Release
+      - persist_to_workspace:
+          root: .
+          paths:
+            - src/Feefo.Core/bin
+            - src/Feefo.Core/obj
+            - src/Feefo.Core.Tests/bin
+            - src/Feefo.Core.Tests/obj
+  test:
+    executor: dotnet-executor
+    steps:
+      - attach_workspace:
+          at: .
+      - run:
+          name: Test Solution
+          command: dotnet test ./src/Feefo.Core.Tests/Feefo.Core.Tests.csproj
+  publish:
+    executor: dotnet-executor
+    parameters:
+      package-version:
+        type: string
+        description: The version number of the package
+    steps:
+      - attach_workspace:
+          at: .
+      - run:
+          name: Create Package folder
+          command: nupkg
+      - run:
+          name: Make Package
+          command: |
+            dotnet pack src/Feefo.Core/Feefo.Core.csproj \
+              --output nupkg \
+              -p:PackageVersion=<<parameters.package-version>>
+      - run:
+          name: Publish Package
+          command: |
+            dotnet nuget push nupkg/Feefo.Core.<<parameters.package-version>>.nupkg \
+              -s https://api.nuget.org/v3/index.json \
+              -k ${NUGET_API_KEY}
+workflows:
+  pr:
+    jobs:
+      - install-deps:
+          filters:
+            branches:
+              ignore:
+                - master
+                - develop
+                - /sandbox\/.*/
+      - build:
+          requires:
+            - install-deps
+      - test:
+          requires:
+            - build
+  publish:
+    jobs:
+      - install-deps:
+          filters:
+            branches:
+              only:
+                - master
+      - build:
+          requires:
+            - install-deps
+      - test:
+          requires:
+            - build
+      - publish
+          package-version: 0.0.0
+          requires:
+            - test
