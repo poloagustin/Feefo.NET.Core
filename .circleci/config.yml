@@ -63,6 +63,7 @@ jobs:
           command: |
             dotnet pack src/Feefo.Core/Feefo.Core.csproj \
               --output nupkg \
+              --configuration Release \
               -p:PackageVersion=<<parameters.package-version>>
       - run:
           name: Publish Package
@@ -100,6 +101,6 @@ workflows:
           requires:
             - build
       - publish:
-          package-version: "0.0.0"
+          package-version: 0.0.1
           requires:
             - test
