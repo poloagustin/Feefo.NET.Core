@@ -99,7 +99,7 @@ workflows:
       - test:
           requires:
             - build
-      - publish
-          package-version: '0.0.0'
+      - publish:
+          package-version: "0.0.0"
           requires:
             - test
