@@ -101,6 +101,6 @@ workflows:
           requires:
             - build
       - publish:
-          package-version: 0.0.1
+          package-version: 0.0.2
           requires:
             - test
