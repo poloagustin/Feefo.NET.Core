@@ -2,7 +2,7 @@ version: 2.1
 executors:
   dotnet-executor:
     docker:
-      - image: mct.microsoft.com/dotnet/core/sdk:3.1
+      - image: mcr.microsoft.com/dotnet/core/sdk:3.1
 orbs:
 jobs:
   install-deps:
