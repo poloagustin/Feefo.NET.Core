@@ -57,7 +57,7 @@ jobs:
           at: .
       - run:
           name: Create Package folder
-          command: nupkg
+          command: mkdir nupkg
       - run:
           name: Make Package
           command: |
