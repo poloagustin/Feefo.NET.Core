@@ -1,15 +1,21 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26124.0
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29709.97
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{34068DAE-9ED2-4E07-9D9A-FDA93ADE6447}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Feefo.Core", "src\Feefo.Core\Feefo.Core.csproj", "{A9E316F6-1CC9-4538-B895-14F2F1748BE7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Feefo.Core", "src\Feefo.Core\Feefo.Core.csproj", "{A9E316F6-1CC9-4538-B895-14F2F1748BE7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Feefo.Core.Tests", "src\Feefo.Core.Tests\Feefo.Core.Tests.csproj", "{C4CBCFB2-1204-4757-AA2F-22E251B527CB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Feefo.Core.Tests", "src\Feefo.Core.Tests\Feefo.Core.Tests.csproj", "{C4CBCFB2-1204-4757-AA2F-22E251B527CB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Feefo.Core.AcceptanceTests", "src\Feefo.Core.AcceptanceTests\Feefo.Core.AcceptanceTests.csproj", "{FD2F06CC-4381-4603-BD99-7F5768E7241F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Feefo.Core.AcceptanceTests", "src\Feefo.Core.AcceptanceTests\Feefo.Core.AcceptanceTests.csproj", "{FD2F06CC-4381-4603-BD99-7F5768E7241F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{651BC184-8B0C-4C49-BA88-05E295D4D931}"
+	ProjectSection(SolutionItems) = preProject
+		.circleci\config.yml = .circleci\config.yml
+		nuget.config = nuget.config
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,9 +25,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 		Release|x64 = Release|x64
 		Release|x86 = Release|x86
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{A9E316F6-1CC9-4538-B895-14F2F1748BE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -61,9 +64,15 @@ Global
 		{FD2F06CC-4381-4603-BD99-7F5768E7241F}.Release|x86.ActiveCfg = Release|Any CPU
 		{FD2F06CC-4381-4603-BD99-7F5768E7241F}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{A9E316F6-1CC9-4538-B895-14F2F1748BE7} = {34068DAE-9ED2-4E07-9D9A-FDA93ADE6447}
 		{C4CBCFB2-1204-4757-AA2F-22E251B527CB} = {34068DAE-9ED2-4E07-9D9A-FDA93ADE6447}
 		{FD2F06CC-4381-4603-BD99-7F5768E7241F} = {34068DAE-9ED2-4E07-9D9A-FDA93ADE6447}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7D36FBA7-7365-4ED1-9430-FE1D881E13E8}
 	EndGlobalSection
 EndGlobal

@@ -18,12 +18,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="StubHttpMessageHandler.cs">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Compile>
-  </ItemGroup>
-
-  <ItemGroup>
     <None Update="FeefoRssFeed.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
